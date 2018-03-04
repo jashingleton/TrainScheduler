@@ -1,0 +1,36 @@
+#heading {
+    text-align: center;
+    background-color: gold;
+    color: white;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    font-family: 'Krona One', sans-serif;
+   }
+
+#currentForm {
+    margin-top: 30px;
+    border: solid black 3px;
+}
+
+h4 {
+    background-color: gold;
+    margin-top: 0;
+    padding: 5px;
+    font-family: 'Krona One', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+#trainForm {
+        margin-top: 30px;
+        border: solid black 3px;
+}
+
+.pad {
+   padding: 30px;
+}
+
+#pad {
+    padding: 15px;
+}
