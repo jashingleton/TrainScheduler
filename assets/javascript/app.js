@@ -58,10 +58,27 @@ $("#add-train-btn").on("click", function(event) {
         console.log(tFirstTime);
         console.log(tFrequency);
 
-        var frequencyMoment = moment.unix(tFirstTime).format("HH:mm");
+
+        var firstTimeConverted = moment(tFirstTime, "HH:mm").subtract(1, "years");
+        console.log(firstTimeConverted);
+
+        var currentTime = moment();
+        console.log("current time: " + moment(currentTime).format("HH:mm"));
+
+        var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+        console.log ("Difference in time: " + diffTime);
+
+        var tRemainder = diffTime % tFrequency;
+        console.log(tRemainder)
+
+        var tMinutesTillTrain = tFrequency - tRemainder;
+        console.log("Minutes til train: " + tMinutesTillTrain); 
+
+        var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+        console.log("Arrival time: " + moment(nextTrain).format("hh:mm")); 
 
         $("#train-table > tbody").append("<tr><td>" + tName + "</td><td>" + tDestination + "</td><td>" +
-  frequencyMoment + "</td><td>" + tName + "</td><td>" + tName + "</td><td>");
+  tFrequency + "</td><td>" + (moment(nextTrain).format("hh:mm")) + "</td><td>" + tMinutesTillTrain + "</td><td>");
 
  });
  
