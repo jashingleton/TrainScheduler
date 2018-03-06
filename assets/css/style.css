@@ -6,6 +6,7 @@
     padding-top: 15px;
     padding-bottom: 25px;
     font-family: 'Krona One', sans-serif;
+    border: solid black 3px;
    }
 
 #currentForm {
